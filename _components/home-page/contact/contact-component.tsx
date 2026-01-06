@@ -20,16 +20,33 @@ const ContactComponent = () => {
             Contact
           </SectionHeading>
           <div className="grid gap-8 place-self-start w-full">
-            <div className="grid gap-8 tablet:gap-3">
-              <div className="grid gap-2 tablet:grid-cols-[75px_1fr] justify-items-start">
-                <h3 className="text-subheading">Email:</h3>
-                <ShowEmailAddress />
+            <div className="grid gap-8 desktop:grid-cols-2 desktop:gap-10">
+              <div className="grid gap-8 tablet:gap-3">
+                <div className="grid gap-2 tablet:grid-cols-[65px_1fr] justify-items-start">
+                  <h3 className="text-subheading">Email:</h3>
+                  <ShowEmailAddress />
+                </div>
+                <div className="grid gap-2 tablet:grid-cols-[65px_1fr] justify-items-start">
+                  <h3 className="text-subheading">Phone:</h3>
+                  <ShowPhoneNumber />
+                </div>
+                <SocialIcons black cssClasses="tablet:mt-5 desktop:mt-0" />
               </div>
-              <div className="grid gap-2 tablet:grid-cols-[75px_1fr] justify-items-start">
-                <h3 className="text-subheading">Phone:</h3>
-                <ShowPhoneNumber />
+              <div>
+                <h3 className="text-subheading">Hours:</h3>
+                <div className="grid gap-2 grid-cols-[85px_1fr] justify-items-start">
+                  <p>Weekdays:</p>
+                  <p>9:00-16:30</p>
+                </div>
+                <div className="grid gap-2 grid-cols-[85px_1fr] justify-items-start">
+                  <p>Saturday:</p>
+                  <p>9:00-13:00</p>
+                </div>
+                <div className="grid gap-2 grid-cols-[85px_1fr] justify-items-start">
+                  <p>Sunday:</p>
+                  <p>Closed</p>
+                </div>
               </div>
-              <SocialIcons black cssClasses="tablet:mt-5 desktop:mt-0" />
             </div>
             <ContactFormComponent />
           </div>
