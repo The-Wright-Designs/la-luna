@@ -39,9 +39,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'La Luna Boutique',
+    url: 'https://www.lalunaplett.co.za',
+  };
+
   return (
     <html lang="en">
       <body className={`${outfitSansSerif.className} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Header />
         {children}
         <Footer />
