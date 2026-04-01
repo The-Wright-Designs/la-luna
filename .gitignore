@@ -42,3 +42,4 @@ next-env.d.ts
 
 # claude code
 *.local.md
+HANDOVER-DOC.md

@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import navData from "@/_data/nav-data.json";
 import SocialIcons from "@/_components/ui/social-icons";
+import classNames from "classnames";
 
 export function DesktopFooter() {
   return (
@@ -15,7 +16,10 @@ export function DesktopFooter() {
                 <li key={item.title}>
                   <Link
                     href={item.url}
-                    className="text-[14px] text-white hover:text-opacity-80 ease-in-out duration-200 hover:text-pink"
+                    className={classNames(
+                      "text-[14px] text-white hover:text-opacity-80 ease-in-out duration-200 hover:text-pink",
+                      item.title === "Shop" && "font-semibold",
+                    )}
                   >
                     {item.title}
                   </Link>

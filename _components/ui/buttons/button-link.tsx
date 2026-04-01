@@ -15,7 +15,7 @@ const ButtonLink = ({
     <Link
       href={href}
       onClick={onClick}
-      className={buttonStyles(cssClasses, disabled, colorBlack)}
+      className={buttonStyles(cssClasses, disabled, undefined, colorBlack)}
       aria-label={ariaLabel}
     >
       {children}

@@ -52,7 +52,7 @@ export function MobileHeader() {
           "fixed inset-0 z-50 transform bg-white transition-transform duration-300 ease-in-out",
           {
             "translate-x-full": !isOpen,
-          }
+          },
         )}
       >
         <div className="flex py-5 items-center justify-end px-7">
@@ -72,7 +72,10 @@ export function MobileHeader() {
                   <Link
                     href={url}
                     onClick={() => setIsOpen(false)}
-                    className="text-[20px] text-black font-normal p-3 -m-3"
+                    className={classNames(
+                      "text-[20px] text-black font-normal p-3 -m-3",
+                      title === "Shop" && "font-semibold",
+                    )}
                     prefetch={false}
                   >
                     {title}

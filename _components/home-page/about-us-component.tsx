@@ -1,6 +1,7 @@
 import LayoutWrapper from "@/_lib/utils/layout-wrapper";
 import SectionHeading from "@/_lib/utils/section-heading";
 import Image from "next/image";
+import ButtonLink from "../ui/buttons/button-link";
 
 const AboutUsComponent = () => {
   return (
@@ -29,6 +30,14 @@ const AboutUsComponent = () => {
               style.
             </p>
           </div>
+          <ButtonLink
+            href="https://boutique.lalunaplett.co.za"
+            ariaLabel="Visit our shop"
+            cssClasses="mt-7"
+            colorBlack
+          >
+            Shop now
+          </ButtonLink>
         </div>
         <div className="grid gap-10 min-[600px]:grid-cols-2 desktop:grid-cols-3">
           <div>

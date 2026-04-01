@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import navData from "@/_data/nav-data.json";
+import classNames from "classnames";
 
 export function DesktopHeader() {
   return (
@@ -22,7 +23,10 @@ export function DesktopHeader() {
               <li key={id}>
                 <Link
                   href={url}
-                  className="text-paragraph text-white hover:text-pink"
+                  className={classNames(
+                    "text-paragraph text-white hover:text-pink",
+                    title === "Shop" && "font-semibold",
+                  )}
                   prefetch={false}
                 >
                   {title}
